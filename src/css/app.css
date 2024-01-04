@@ -17,9 +17,56 @@
   background: white;
   border-radius: 3px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
+  /* overflow: scroll; */
+  position: relative;
 }
 
 #app .container-view {
   padding: 20px;
+  overflow: scroll;
+  height: 100%;
 }
 
+.wrapper {
+  position: relative;
+  overflow: auto;
+  height: 100%;
+}
+
+.bottomNav {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  right: 0;
+  left: 0;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  padding: 0 0;
+}
+
+.bottomNavItem {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.bottomNavItemIcon {
+  /* width: 20px;
+  font */
+  font-size: 20px;
+}
+
+.bottomNavItemTitle {
+  font-size: 14px;
+  color: #333333;
+  margin-top: 8px;
+}
+
+.active {
+  /* color: #00b87c; */
+  /* background-color: #b8b7b7; */
+  border-top: 2px solid #b8b7b7;
+}

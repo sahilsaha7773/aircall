@@ -1,0 +1,130 @@
+.modalContainer {
+  position: absolute;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.archiveButton {
+  margin: 20px 0;
+  padding: 24px 16px;
+  border: 1px solid rgb(175, 171, 171, 0.5);
+  border-radius: 4px;
+  background-color: white;
+  color: grey;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.archiveIcon {
+  font-size: 24px;
+  margin-right: 12px;
+  color: grey;
+}
+
+.noCalls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noCallsIcon {
+  font-size: 40px;
+  color: grey;
+}
+
+.noCallsTitle {
+  font-size: 16px;
+  color: grey;
+  margin: 14px 0;
+}
+
+.date {
+  color: grey;
+  margin: 20px;
+  text-align: center;
+  display: flex;
+}
+
+.date::before,
+.date::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid grey;
+  margin: auto;
+}
+
+.date span {
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 40px;
+  color: grey;
+}
+
+.activity {
+  cursor: pointer;
+  border: 1px solid rgb(175, 171, 171, 0.5);
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 14px 20px;
+
+  display: flex;
+  align-items: center;
+
+  /* box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, .2); */
+}
+
+.activity:hover {
+  background-color: rgb(175, 171, 171, 0.1);
+
+}
+
+.callIcon {
+  font-size: 20px;
+  margin-right: 16px;
+  color: green;
+  border-right: 1px solid rgb(189, 187, 187);
+  padding-right: 16px;
+  height: 100%;
+}
+
+.red {
+  color: red;
+  /* background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 3px;
+  /* width: 24px; */
+  /* height: 24px; */
+  /* text-align: center; */
+  /* line-height: 24px; */
+
+  /* font-size: 12px; */
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.from {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.to {
+  font-size: 14px;
+  color: grey;
+}
+
+.time {
+  height: fit-content;
+  font-size: 14px;
+  color: grey;
+  border-left: 2px dotted grey;
+  padding-left: 8px;
+}

@@ -1,0 +1,134 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* bottom: 0; */
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.modalContent {
+  background-color: #fefefe;
+  /* margin: 15% auto; */
+  /* margin-bottom: auto; */
+  padding: 20px;
+  border: 1px solid #888;
+  /* width: 40%; */
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bcbaba;
+  padding-bottom: 10px;
+}
+
+.modalTitle {
+  font-size: 20px;
+  /* font-weight: bold; */
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  /* font-weight: bold; */
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.modalBodyContent {
+  width: 100%;
+}
+
+.modalContentLeftIcon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modalBodyHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.modalBodyHeaderDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  /* margin-left: 20px; */
+}
+
+.modalBodyHeaderDetailsTitle {
+  font-size: 14px;
+  /* font-family: ; */
+  /* font-weight: bold; */
+  margin-bottom: 8px;
+}
+
+.modalBodyHeaderDetailsTime {
+  font-size: 12px;
+  color: grey;
+}
+
+.modalInfo {
+  padding: 10px;
+  border: 1px solid #bcbaba;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.modalInfoItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.modalInfoItemTitle {
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.modalInfoItemValue {
+  font-size: 12px;
+  color: grey;
+}
+
+.modalFooterButton {
+  margin-left: auto;
+}
+
+
+.modalFooterButtonArchive {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid #bcbaba;
+  border-radius: 4px;
+  padding: 16px 16px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.modalFooterButtonArchiveIcon {
+  margin-right: 8px;
+  font-size: 16px;
+}
