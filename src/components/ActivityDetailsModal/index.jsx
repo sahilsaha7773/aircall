@@ -24,12 +24,10 @@ const ActivityDetailsModal = ({ activity, onClose, updateActivities }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // ...activity,
         is_archived: !activity.is_archived,
       }),
     })
       .then((response) => {
-        // response.json();
         if (response.status === 200) {
           setButtonText("Success");
           updateActivities();
@@ -86,7 +84,21 @@ const ActivityDetailsModal = ({ activity, onClose, updateActivities }) => {
                         Outgoing Missed call
                       </div>
                       <div className="modalBodyHeaderDetailsTime">
-                        {new Date(activity.created_at).toDateString()}
+                        <div className="modalBodyHeaderDetailsDateTime">
+                          <div>
+                            {new Date(activity.created_at).toLocaleTimeString(
+                              [],
+                              {
+                                hour: "2-digit",
+                                minute: "2-digit",
+                                hour12: true,
+                              }
+                            )}
+                          </div>
+                          <div>
+                            {new Date(activity.created_at).toDateString()}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ) : (
@@ -95,7 +107,21 @@ const ActivityDetailsModal = ({ activity, onClose, updateActivities }) => {
                         Incoming Missed call
                       </div>
                       <div className="modalBodyHeaderDetailsTime">
-                        {new Date(activity.created_at).toDateString()}
+                        <div className="modalBodyHeaderDetailsDateTime">
+                          <div>
+                            {new Date(activity.created_at).toLocaleTimeString(
+                              [],
+                              {
+                                hour: "2-digit",
+                                minute: "2-digit",
+                                hour12: true,
+                              }
+                            )}
+                          </div>
+                          <div>
+                            {new Date(activity.created_at).toDateString()}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   )
@@ -105,7 +131,21 @@ const ActivityDetailsModal = ({ activity, onClose, updateActivities }) => {
                       Outgoing call
                     </div>
                     <div className="modalBodyHeaderDetailsTime">
-                      {new Date(activity.created_at).toDateString()}
+                      <div className="modalBodyHeaderDetailsDateTime">
+                        <div>
+                          {new Date(activity.created_at).toLocaleTimeString(
+                            [],
+                            {
+                              hour: "2-digit",
+                              minute: "2-digit",
+                              hour12: true,
+                            }
+                          )}
+                        </div>
+                        <div>
+                          {new Date(activity.created_at).toDateString()}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ) : (
@@ -114,12 +154,26 @@ const ActivityDetailsModal = ({ activity, onClose, updateActivities }) => {
                       Incoming call
                     </div>
                     <div className="modalBodyHeaderDetailsTime">
-                      {new Date(activity.created_at).toDateString()}
+                      <div className="modalBodyHeaderDetailsDateTime">
+                        <div>
+                          {new Date(activity.created_at).toLocaleTimeString(
+                            [],
+                            {
+                              hour: "2-digit",
+                              minute: "2-digit",
+                              hour12: true,
+                            }
+                          )}
+                        </div>
+                        <div>
+                          {new Date(activity.created_at).toDateString()}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
-                <div claassName="modalBodyHeaderDetailsDuration">
-                  {activity.duration} seconds
+                <div className="modalBodyHeaderDetailsDuration">
+                  {new Date(activity.duration * 1000).toISOString().slice(11, 19)}
                 </div>
               </div>
             </div>

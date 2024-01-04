@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.activityListWrapper {
+  padding-bottom: 150px;
+}
+
 .archiveButton {
   margin: 20px 0;
   padding: 24px 16px;
@@ -16,6 +20,10 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+.archiveButton:hover {
+  background-color: rgb(175, 171, 171, 0.1);
 }
 
 .archiveIcon {
@@ -92,16 +100,6 @@
 
 .red {
   color: red;
-  /* background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 3px;
-  /* width: 24px; */
-  /* height: 24px; */
-  /* text-align: center; */
-  /* line-height: 24px; */
-
-  /* font-size: 12px; */
 }
 
 .details {

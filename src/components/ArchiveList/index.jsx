@@ -123,11 +123,6 @@ const ArchiveList = () => {
                 <SlCallIn />
               )}
             </div>
-            {/* {activity.direction === "outbound" ? (
-              <div className="number">{activity.to}</div>
-            ) : (
-              <div className="number">{activity.from}</div>
-            )} */}
             <div className="details">
               <div className="">
                 <div className="from">
@@ -145,13 +140,10 @@ const ArchiveList = () => {
                   hour: "2-digit",
                   minute: "2-digit",
                   hour12: true,
-                  // hourCycle: "h12",
-                  // timeStyle: "short",
                 })}
               </div>
             </div>
           </div>
-          {/* <Activity activity={activity} /> */}
         </div>
       ))}
     </div>

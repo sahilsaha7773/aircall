@@ -8,30 +8,17 @@ import ArchiveList from "./components/ArchiveList/index.jsx";
 import { IoHomeOutline } from "react-icons/io5";
 import { LuArchive } from "react-icons/lu";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <ActivitiesList />,
-  },
-  {
-    path: "/details",
-    element: <div>Details</div>,
-  },
-]);
 const App = () => {
   const [archivedTab, setArchivedTab] = useState(false);
   return (
     <div className="container">
+      <Header />
       <div className="wrapper">
-        <Header />
         <div className="bottomNav">
           <div
             className={`bottomNavItem ${!archivedTab ? "active" : ""}`}
             onClick={() => setArchivedTab(false)}
           >
-            {/* <div className="bottomNavItemIcon">
-            <img src="https://img.icons8.com/ios/50/000000/home--v1.png" />
-          </div> */}
             <IoHomeOutline className="bottomNavItemIcon" />
             <div className="bottomNavItemTitle">Home</div>
           </div>
@@ -39,16 +26,11 @@ const App = () => {
             className={`bottomNavItem ${archivedTab ? "active" : ""}`}
             onClick={() => setArchivedTab(true)}
           >
-            {/* <div className="bottomNavItemIcon">
-            <img src="https://img.icons8.com/ios/50/000000/phone.png" />
-          </div> */}
             <LuArchive className="bottomNavItemIcon" />
             <div className="bottomNavItemTitle">Arhieved</div>
           </div>
         </div>
         <div className="container-view">
-          {/* Some activities should be here */}
-          {/* <ActivitiesList /> */}
           {archivedTab ? <ArchiveList /> : <ActivitiesList />}
         </div>
       </div>
